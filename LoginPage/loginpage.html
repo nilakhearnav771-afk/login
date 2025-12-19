@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lumio | Student Login</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: linear-gradient(
+        135deg,
+        #2ecc71,
+        #27ae60,
+        #1e8449
+      );
+      position: relative;
+      overflow: hidden;
+    }
+
+    /* BACKGROUND PATTERN LAYER */
+    body::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background-image:
+        repeating-linear-gradient(
+          45deg,
+          rgba(255,255,255,0.08) 0px,
+          rgba(255,255,255,0.08) 2px,
+          transparent 2px,
+          transparent 80px
+        ),
+        repeating-linear-gradient(
+          -45deg,
+          rgba(255,255,255,0.08) 0px,
+          rgba(255,255,255,0.08) 2px,
+          transparent 2px,
+          transparent 80px
+        );
+      pointer-events: none;
+    }
+
+    /* FAKE GRADUATION HAT SHAPES */
+    body::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background-image:
+        radial-gradient(circle at 20px 20px, rgba(255,255,255,0.12) 2px, transparent 3px),
+        radial-gradient(circle at 60px 60px, rgba(255,255,255,0.12) 2px, transparent 3px);
+      background-size: 120px 120px;
+      pointer-events: none;
+    }
+
+    .login-card {
+      position: relative;
+      background: #ffffff;
+      width: 100%;
+      max-width: 420px;
+      padding: 32px;
+      border-radius: 18px;
+      box-shadow: 0 25px 60px rgba(0, 0, 0, 0.25);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      z-index: 1;
+    }
+
+    .login-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 35px 70px rgba(0, 0, 0, 0.3);
+    }
+
+    .header {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      margin-bottom: 24px;
+    }
+
+    .header img {
+      width: 48px;
+    }
+
+    .header h1 {
+      font-size: 28px;
+      font-weight: 700;
+      color: #1f3d2b;
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      font-size: 22px;
+      color: #333;
+    }
+
+    .form-group {
+      margin-bottom: 16px;
+    }
+
+    .form-group label {
+      display: block;
+      margin-bottom: 6px;
+      font-size: 14px;
+      color: #555;
+    }
+
+    .form-group input {
+      width: 100%;
+      padding: 10px 12px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      font-size: 14px;
+      transition: all 0.25s ease;
+    }
+
+    .form-group input:focus {
+      outline: none;
+      border-color: #2ecc71;
+      box-shadow: 0 0 0 3px rgba(46, 204, 113, 0.2);
+    }
+
+    .login-btn {
+      width: 100%;
+      padding: 12px;
+      border: none;
+      border-radius: 10px;
+      background: linear-gradient(135deg, #2ecc71, #27ae60);
+      color: #ffffff;
+      font-size: 16px;
+      font-weight: 600;
+      cursor: pointer;
+      margin-top: 8px;
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+    }
+
+    .login-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 12px 25px rgba(46, 204, 113, 0.45);
+    }
+
+    .footer {
+      text-align: center;
+      margin-top: 16px;
+      font-size: 13px;
+      color: #777;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="login-card">
+    <div class="header">
+      <img src="Lumio.png">
+      <h1>Lumio</h1>
+    </div>
+
+    <h2>Student Login</h2>
+
+    <form>
+      <div class="form-group">
+        <label>Student Email / ID</label>
+        <input type="text" placeholder="student@school.com" required>
+      </div>
+
+      <div class="form-group">
+        <label>Password</label>
+        <input type="password" placeholder="Enter password" required>
+      </div>
+
+      <button class="login-btn" type="submit">Login</button>
+    </form>
+
+    <div class="footer">
+      © 2025 Lumio • Student Portal
+    </div>
+  </div>
+</body>
+</html>
+
+
+
+
+
